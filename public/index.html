@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Flash Peak Community — Daftar Member</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── Live Join Ticker ── -->
+<div class="ticker" id="ticker">
+  <div class="ticker-inner" id="tickerInner">
+    <svg viewBox="0 0 24 24" width="18" height="18" class="ticker-ball" fill="none">
+      <circle cx="12" cy="12" r="10" fill="#fff"/>
+      <path d="M12 6l3 2.2-1.1 3.5H10.1L9 8.2 12 6z" fill="#111"/>
+      <path d="M12 2v4M12 22v-4M2 12h4M22 12h-4M4.9 4.9l2.8 2.8M19.1 4.9l-2.8 2.8M4.9 19.1l2.8-2.8M19.1 19.1l-2.8-2.8" stroke="#111" stroke-width="1"/>
+    </svg>
+    <span class="ticker-col ticker-nama" id="tkNama">—</span>
+    <span class="ticker-col ticker-usia" id="tkUsia">—</span>
+    <span class="ticker-col ticker-status succeed" id="tkStatus">—</span>
+  </div>
+</div>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <circle cx="20" cy="20" r="18" fill="#0e7a3f" stroke="#ffc93c" stroke-width="2"/>
+        <path d="M20 10l5 3.6-1.9 5.9h-6.2L15 13.6 20 10z" fill="#fff"/>
+        <path d="M20 10v4.2M20 25.6V30M10 20h4.5M25.5 20H30" stroke="#fff" stroke-width="1.4"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-main">FLASH PEAK</span>
+        <span class="nav-logo-sub">Community</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#tentang">Tentang</a>
+      <a href="#posisi">Posisi</a>
+      <a href="#daftar" class="nav-cta-link">Daftar</a>
+    </div>
+    <div class="nav-live">
+      <span class="live-dot"></span> <span id="onlineCount">0</span> member
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- ══════════ LANDING HERO ══════════ -->
+  <section class="landing">
+    <div class="landing-glow glow-1"></div>
+    <div class="landing-glow glow-2"></div>
+    <div class="landing-field"></div>
+    <div class="landing-ball ball-1"></div>
+    <div class="landing-ball ball-2"></div>
+    <div class="landing-ball ball-3"></div>
+    <div class="landing-particles" id="landingParticles"></div>
+
+    <div class="landing-content">
+      <span class="section-label float-badge">⚡ Komunitas Bola Flash Terbesar</span>
+      <h1 class="landing-title">
+        Selamat Datang di <br/>
+        <span class="text-gradient-gold">FLASH PEAK</span> COMMUNITY
+      </h1>
+      <p class="landing-subtitle">
+        Gabung bareng ratusan pemain lain, kejar puncak leaderboard, dan jadi bagian dari
+        <strong>LORD MEMBER</strong> — kartu identitas eksklusif komunitas ⚽
+      </p>
+      <div class="landing-cta">
+        <a href="#daftar" class="btn-register btn-hero btn-pulse">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6l3.2 2.3-1.2 3.8h-4l-1.2-3.8L12 6z"/></svg>
+          Daftar Sekarang
+        </a>
+        <a href="#anggota" class="btn-ghost">Lihat Anggota Live</a>
+      </div>
+
+      <div class="landing-stats">
+        <div class="stat-box">
+          <span class="stat-num" id="statTotal">0</span>
+          <span class="stat-label">Member Terdaftar</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Real-time</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">Terbuka</span>
+        </div>
+      </div>
+
+      <div class="hero-avatars" id="heroAvatars">
+        <span class="hero-avatars-label"><span class="live-dot"></span> Baru gabung</span>
+        <div class="hero-avatars-stack" id="heroAvatarStack"></div>
+      </div>
+    </div>
+    <div class="landing-scroll-cue">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE SPONSOR/PARTNER STRIP ══════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-glow"></div>
+    <div class="marquee-track">
+      <span>⚡ FLASH PEAK COMMUNITY</span><span>⚽ SQUAD UP, RAIH PUNCAK</span>
+      <span>🏆 LORD MEMBER EXCLUSIVE</span><span>🔥 REAL-TIME REGISTRATION</span>
+      <span>⚡ FLASH PEAK COMMUNITY</span><span>⚽ SQUAD UP, RAIH PUNCAK</span>
+      <span>🏆 LORD MEMBER EXCLUSIVE</span><span>🔥 REAL-TIME REGISTRATION</span>
+    </div>
+  </div>
+
+  <!-- ══════════ TENTANG ══════════ -->
+  <section class="about" id="tentang">
+    <span class="section-tag">Kenapa Gabung</span>
+    <h2 class="section-heading">Bukan Sekadar Komunitas Biasa</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffc93c" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6l3.2 2.3-1.2 3.8h-4l-1.2-3.8L12 6z"/></svg>
+        </div>
+        <h3>Komunitas Aktif</h3>
+        <p>Ngumpul bareng pemain Flash Peak lain, sharing strategi, sampai bikin tim bareng.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00e37a" stroke-width="2"><path d="M22 12h-4l-3 9-6-18-3 9H2"/></svg>
+        </div>
+        <h3>Real-time 100%</h3>
+        <p>Setiap pendaftar langsung muncul notifikasi & masuk daftar anggota tanpa delay.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M14 9h4M14 13h4"/></svg>
+        </div>
+        <h3>ID Card Eksklusif</h3>
+        <p>Dapetin kartu identitas resmi "Lord Member" yang bisa langsung kamu download.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ POSISI PLAYER ══════════ -->
+  <section class="positions" id="posisi">
+    <span class="section-tag">Pilih Peranmu</span>
+    <h2 class="section-heading">Posisi Player</h2>
+    <p class="section-sub">Setiap posisi punya peran dan gaya main sendiri. Pilih yang paling cocok sama gaya kamu.</p>
+    <div class="position-grid" id="positionGrid"></div>
+  </section>
+
+  <!-- ══════════ FORM + LIVE ══════════ -->
+  <section class="main-grid" id="daftar">
+
+    <!-- ── FORM CARD ── -->
+    <div class="form-card" id="formCard">
+      <h2 class="card-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffc93c" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6l3 2.2-1.1 3.5h-3.8L9 8.2 12 6z" fill="#ffc93c" stroke="none"/></svg>
+        Biodata Pendaftar
+      </h2>
+      <p class="card-desc">Isi data diri kamu untuk bergabung ke Flash Peak Community</p>
+
+      <form id="regForm" autocomplete="off">
+        <div class="form-group">
+          <label class="form-label">Nama <span class="req">*</span></label>
+          <input class="form-input" type="text" id="nama" placeholder="Nama lengkap kamu" required/>
+          <span class="form-error" id="errNama"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Usia <span class="req">*</span></label>
+            <input class="form-input" type="number" id="usia" min="10" max="99" placeholder="Umur" required/>
+            <span class="form-error" id="errUsia"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ID Game <span class="req">*</span></label>
+            <input class="form-input" type="text" id="gameId" placeholder="ID kamu di game" required/>
+            <span class="form-error" id="errGameId"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Username <span class="req">*</span></label>
+          <input class="form-input" type="text" id="username" placeholder="@username" required/>
+          <span class="form-error" id="errUsername"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Alasan Bergabung <span class="req">*</span></label>
+          <textarea class="form-input form-textarea" id="alasan" rows="3" placeholder="Kenapa kamu ingin gabung Flash Peak Community?" required></textarea>
+          <span class="form-error" id="errAlasan"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Pilih Posisi <span class="req">*</span></label>
+          <div class="position-picker" id="positionPicker"></div>
+          <span class="form-error" id="errPosisi"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Pilih Avatar</label>
+          <div class="avatar-grid" id="avatarGrid"></div>
+        </div>
+
+        <button type="submit" class="btn-register" id="submitBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6l3.2 2.3-1.2 3.8h-4l-1.2-3.8L12 6z"/></svg>
+          Register Now
+        </button>
+      </form>
+    </div>
+
+    <!-- ── LIVE MEMBERS PANEL ── -->
+    <div class="live-card" id="anggota">
+      <h2 class="card-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e37a" stroke-width="2"><path d="M22 12h-4l-3 9-6-18-3 9H2"/></svg>
+        Anggota Real-time
+        <span class="live-tag"><span class="live-dot"></span>LIVE</span>
+      </h2>
+      <p class="card-desc">Update instan setiap ada yang bergabung — tanpa delay</p>
+
+      <div class="live-table-wrap">
+        <div class="live-table-head">
+          <span>Nama</span><span>Posisi</span><span>Status</span>
+        </div>
+        <div class="live-table-body" id="liveTableBody">
+          <div class="empty-state">Belum ada anggota yang bergabung.</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- ── ID CARD MODAL ── -->
+<div class="modal-overlay" id="idCardModal">
+  <div class="modal-box idcard-modal">
+    <button class="modal-close" id="closeIdCard" aria-label="Tutup">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 class="modal-title">Kartu Identitas Kamu</h3>
+    <div class="idcard-canvas-wrap">
+      <canvas id="idCanvas" width="640" height="380"></canvas>
+    </div>
+    <button class="btn-download" id="downloadBtn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Identity Card
+    </button>
+  </div>
+</div>
+
+<!-- ── SUCCESS / JOIN POPUP ── -->
+<div class="modal-overlay" id="joinPopup">
+  <div class="modal-box join-modal">
+    <div class="join-icon">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <p class="join-text" id="joinText"></p>
+    <a href="https://chat.whatsapp.com/Jhr802X5YEzBfHrHBNZMMp?s=cl&p=a&ilr=4" target="_blank" class="btn-join">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.848L.057 23.986l6.3-1.651C8.025 23.355 9.969 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.863 0-3.597-.512-5.079-1.4l-.364-.216-3.736.979.997-3.645-.237-.375C2.574 15.639 2 13.879 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Join Komunitas
+    </a>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="avatars.js"></script>
+<script src="positions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
